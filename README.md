@@ -76,7 +76,8 @@ ls -l notes.txt                # check the result
 
 **Security lesson:** sensitive files like private keys should be `600` or `400`, and a file should never be `777` (everyone can do everything).
 
-![File permissions with ls -l](images/image1.png)
+<img width="975" height="116" alt="image" src="https://github.com/user-attachments/assets/9eff44a7-4b8d-4bc4-a167-9a315d408eba" />
+
 
 ### Step A3: Users and groups
 
@@ -94,7 +95,7 @@ sudo passwd -l labuser              # lock the account (to test, then undo with 
 
 I learned that `sudo` gives temporary admin rights, so I should use a normal user and use `sudo` only when needed, instead of working as root all the time.
 
-![Creating a user and group](images/image2.png)
+<img width="975" height="410" alt="image" src="https://github.com/user-attachments/assets/e0387ac2-9f81-4187-bd41-a4271128c51d" />
 
 ### Step A4: Process management
 
@@ -150,7 +151,7 @@ hostname -I                             # quick view of IP addresses
 curl -s https://checkip.amazonaws.com   # my public IP as the internet sees it
 ```
 
-![ip addr show output](images/image3.png)
+<img width="975" height="269" alt="image" src="https://github.com/user-attachments/assets/6bb13276-b2f8-4357-a3ac-0afa9a776285" />
 
 ### Step B2: DNS
 
@@ -227,9 +228,9 @@ The order is: **Create VM, Configure Linux, Secure Access, Deploy Service, Test 
 9. Storage: default (for example, 8 GB).
 10. Launch the instance and wait for the status to become **Running**. Note the **public IP address**.
 
-![Security group inbound rules](images/image4.png)
+<img width="975" height="368" alt="image" src="https://github.com/user-attachments/assets/63c44686-73f4-4960-ac5d-5096e4f99dcb" />
 
-![Launch instance summary](images/image5.png)
+<img width="721" height="543" alt="image" src="https://github.com/user-attachments/assets/ecee54b8-c27b-4ab1-97be-c39e773cbe60" />
 
 ### Step 2: Configure Linux
 
@@ -265,9 +266,9 @@ The order is: **Create VM, Configure Linux, Secure Access, Deploy Service, Test 
    free -h
    ```
 
-![System information](images/image6.png)
+<img width="975" height="310" alt="image" src="https://github.com/user-attachments/assets/5e6c2b11-8dd7-4e02-b3f2-62a16ebbdb18" />
 
-![Terminal session on the VM](images/image7.png)
+<img width="975" height="285" alt="image" src="https://github.com/user-attachments/assets/2f17f391-33d4-4feb-9ecb-7dac0b5403e1" />
 
 ### Step 3: Secure access
 
@@ -333,9 +334,9 @@ sudo ufw enable
 sudo ufw status verbose
 ```
 
-![UFW configuration](images/image8.png)
+<img width="975" height="573" alt="image" src="https://github.com/user-attachments/assets/225b7205-a4d1-4285-aea3-2543d596898a" />
 
-![UFW status](images/image9.png)
+<img width="975" height="298" alt="image" src="https://github.com/user-attachments/assets/fbd75fa2-7b9e-4f32-be54-6391ee33de19" />
 
 **3.6 Optional extra protection**
 
@@ -345,9 +346,9 @@ sudo systemctl enable --now fail2ban
 sudo apt install unattended-upgrades -y       # automatic security updates
 ```
 
-![SSH hardening check](images/image10.png)
+<img width="975" height="78" alt="image" src="https://github.com/user-attachments/assets/5c9677fa-8376-4a0f-b24d-4d0a70f5f733" />
 
-![SSH login without key is refused](images/image11.png)
+<img width="975" height="131" alt="image" src="https://github.com/user-attachments/assets/9e14b3cc-d155-4de1-b064-00013e438278" />
 
 ### Step 4: Deploy the service (Nginx web server)
 
@@ -367,9 +368,9 @@ curl http://localhost
 
 If I have a domain, I can open `http://lab.mydomain.com`. If I own a domain and want HTTPS, I can add a free certificate with Certbot (`sudo apt install certbot python3-certbot-nginx` then `sudo certbot --nginx -d lab.mydomain.com`). This is optional.
 
-![Nginx service status](images/image12.png)
+<img width="975" height="277" alt="image" src="https://github.com/user-attachments/assets/269ac72f-f639-403c-b052-a52c1654441f" />
 
-![Test page in the browser](images/image13.png)
+<img width="975" height="268" alt="image" src="https://github.com/user-attachments/assets/b91570b8-0622-47ef-a2b1-d00e63fb31c6" />
 
 ### Step 5: Test connectivity
 
